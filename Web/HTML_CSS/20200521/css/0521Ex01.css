@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  width: 920px;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+.a1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+h1 {
+  color: #5a83e5;
+  font-size: 24px;
+}
+
+.a2{
+  margin-left: 23px;
+  font-size: 15px;
+}
+
+.a2 .b1{
+  color: #444444;
+  font-weight: bold;
+}
+
+.a2 .b1 .c1{
+  width: 28px;
+  float: left;
+}
+
+.a2 .b1 .req{
+  color: red;
+}
+
+.a2 .b2{
+  padding-top: 5px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+li{
+  color: #333333;
+  line-height: 30px;
+}
+
+li input{
+  float: left;
+  margin-top: 9px;
+}
+
+li label{
+  display: block;
+  padding-left: 15px;
+}
+
+.a2 .b3{
+  margin-left: 20px;
+  height: 20px;
+}
+
+.a2 .b2 .c2{
+  width: 400px;
+}
+
+.a3{
+  margin: 20px 340px;
+}
+
+.a3 .b4{
+  padding: 0px 24px;
+  height: 32px;
+  background: #5a83e5;
+  border: 1px solid transparent;
+  color: #fff;
+}

@@ -1,0 +1,40 @@
+
+#user_login {
+	float:left;
+}
+
+#user_login fieldset {
+	/*border:1px solid #dddddd;*/
+	clear:left;
+	margin:1em 0;
+	padding:15px;
+}
+
+#user_login legend {
+	color:#996633;
+	font-size:135%;
+	font-weight:normal;
+	letter-spacing:-1px;
+	line-height:1;
+	padding:0 0.5em;
+}
+
+#user_login .loginbox {
+	float:left;
+	width: 350px;
+	background:#f2f2f2;
+	border:1px solid #ccc;
+	margin-top: 10px;
+}
+
+.loginbox .table_f {
+	margin:10px;
+}
+
+.table_f td {
+	line-height:25px;
+	height:25px;
+	padding:5px;
+	font-size:12px;
+}
+

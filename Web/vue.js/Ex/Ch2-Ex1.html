@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue.js第二章作业一</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<p>VueJS is pretty cool - {{name}}({{age}})</p>
+
+		<p>{{age * 3}}</p>
+
+		<p>{{random()}}</p>
+
+		<div>
+			<img v-bind:src="image" style="width: 200px;height: 200px;">
+		</div>
+
+		<div>
+			<input type="text" v-bind:value="name">
+		</div>
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				name: 'ChenZhe',
+				age: 19,
+				image: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602866790424&di=ee3b5ce4a4cdd1e5d9bf1ce2f5e40557&imgtype=0&src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-4026c1e2d7ecb2220ce5071e65bd21f4_1200x500.jpg'
+			},
+			methods: {
+				random: function () {
+					return Math.random();
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

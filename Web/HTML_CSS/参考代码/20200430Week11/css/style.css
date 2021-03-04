@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/* 这份参考答案用于讲解first-child和nth-child的使用方法 */
+/* 未做鼠标经过样式，未做防溢出限制 */
+
+body{
+    font: 14px SimSun,"Arial Narrow",HELVETICA;
+}
+
+a{
+    text-decoration: none;
+    color: #172c45;
+}
+
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sports{
+    width: 660px;
+    border-top: 1px solid #6daaea;
+}
+
+h2{
+    margin: 0 0 0 5px;
+    line-height: 29px;
+}
+
+h2 a{
+    color: #0873c0;
+    font-size: 14px;
+}
+
+.sports ul{
+    padding: 17px 0 0;
+}
+
+.sports li:first-child {
+    margin-bottom: 8px;
+}
+
+.sports li:first-child a{
+    color: #3b639f;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.sports li:first-child img{
+    margin-right: 14px;
+    vertical-align: middle;
+}
+
+.sports li:first-child span{
+    display: inline-block;
+    width: 182px;
+    vertical-align: middle;
+}
+
+.sports li{
+    width: 320px;
+    line-height: 28px;
+}
+
+.sports li:nth-child(n+8){
+    margin-left: 340px;
+}
+
+.sports li:nth-child(8){
+    margin-top: -251px;
+}
+
+/* 项目符号的制作方法 */
+
+.sports li:nth-child(n+2):nth-child(-n+7) {
+    padding-left: 19px;
+    background: url(../images/iconNBA.png) 0 -43px no-repeat;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue.js第二章</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style>
+		.demo {
+			width: 100px;
+			height: 100px;
+			background-color: gray;
+			display: inline-block;
+			margin: 10px;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<!-- 031 css类动态样式-基础 -->
+		<p>031 css类动态样式-基础</p>
+		<div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed}"></div>
+		<div class="demo" :class="{red: attachRed}"></div>
+		<div class="demo"></div>
+		<!-- 032 css类动态样式-使用对象-->
+		<p>032 css类动态样式-使用对象</p>
+		<div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+		<div class="demo" :class="{red: attachRed}"></div>
+		<div class="demo"></div>
+		<!-- 033 css类动态样式-使用命名 -->
+		<p>033 css类动态样式-使用命名</p>
+		<div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+		<div class="demo" :class="{red: attachRed}"></div>
+		<div class="demo" :class="[color, {red: attachRed}]"></div>
+		<hr>
+		<input type="text" v-model="color">
+		<!-- 034 动态设置样式（不使用css类） -->
+		<p>034 动态设置样式（不使用css类）</p>
+		<div class="demo" :style="{backgroundColor: color1}"></div>
+		<div class="demo" :style="myStyle"></div>
+		<div class="demo"></div>
+		<hr>
+		<input type="text" v-model="color1">
+		<input type="text" v-model="width">
+		<!-- 035 用数组语法数组元素样式 -->
+		<p>035 用数组语法数组元素样式</p>
+		<div class="demo" :style="{backgroundColor: color1}"></div>
+		<div class="demo" :style="myStyle"></div>
+		<div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+		<hr>
+		<input type="text" v-model="color1">
+		<input type="text" v-model="width">
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				attachRed: false,
+				color: 'green',
+				color1: 'gray',
+				width: 100
+			},
+			computed: {
+				divClasses: function () {
+					return {
+						red: this.attachRed,
+						blue: !this.attachRed
+					}
+				},
+				myStyle: function () {
+					return {
+						backgroundColor: this.color1,
+						width: this.width + 'px'
+					}
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

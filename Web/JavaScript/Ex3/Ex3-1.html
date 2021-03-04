@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		var m = 0;
+		var s = 0;
+		var status = 0;
+
+		function startTime() {
+
+			if (status == 0) {
+				s = checkTime(s);
+				if (m == 0) {
+					m = "00";
+				}
+				if (s != 0 & s % 60 == 0) {
+					m = checkTime(m);
+					s = "00";
+				}
+				document.getElementById('txt').innerHTML = m + ":" + s;
+				t = setTimeout('startTime()', 1000);
+			} else {
+				clearTimeout(t);
+				status = 0;
+			}
+		}
+
+		function stop() {
+			clearTimeout(t);
+			document.getElementById('txt').innerHTML = m + ":" + s;
+
+		}
+
+		function checkTime(i) {
+			i++;
+			if (i < 10) {
+				i = "0" + i;
+			}
+			return i;
+		}
+
+		function stop() {
+			status += 1;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="txt"></div>
+	<button onclick="startTime()" ondblclick="stop()">开始</button>
+	<button onclick="stop()">暂停</button>
+</body>
+
+</html>

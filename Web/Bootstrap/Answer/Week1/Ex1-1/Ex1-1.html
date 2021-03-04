@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>第一周练习1</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            background: #f8f8f8;
+        }
+        @media (min-width: 992px){
+            .container {
+                width: 970px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            .number {
+                font-size: 50px !important;
+                line-height: 1.5em !important;
+            }
+        }
+        .h1, h2 small, h4{
+            font-weight:300;
+        }
+        .main-title{
+            margin-bottom: 30px;
+        }
+        .line{
+            margin: 30px auto 26px;
+            width: 80px;
+            border-top: 2px solid #0ba1e4;
+        }
+        .number{
+            font-family: "Roboto", Arial, Tahoma, sans-serif;
+            font-size: 70px;
+            line-height: 1.5em;
+            color: #0ba1e4;
+        }
+        .title{
+            color: #919191;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 main-title">
+                <h2 class="h1 text-center">我们的成绩</h2>
+                <p class="line"></p>
+                <h2 class="text-center"><small>2016年1月1日至2016年12月31日，我们的接待数据。</small></h2>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-3">
+                <p class="number">18,397</p>
+                <h4 class="title">累计受理申请</h4>
+            </div>
+            <div class="col-sm-3">
+                <p class="number">98.9%</p>
+                <h4 class="title">综合通过率</h4>
+            </div>
+            <div class="col-sm-3">
+                <p class="number">3,273</p>
+                <h4 class="title">加急申请人数</h4>
+            </div>
+            <div class="col-sm-3">
+                <p class="number">100%</p>
+                <h4 class="title">加急成功率</h4>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- 以下代码用于教学，使用的标签不一定最好 -->
+<html>
+<!-- https://www.zhihu.com/question/20797118 -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 后面的课会讲，你们可以先去查“视口” -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>枫和源酒店</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		var time;
+		var time2;
+		window.onload = function () {
+			var oSideul = document.getElementById('slide-ul');
+			oSideul.innerHTML += oSideul.innerHTML;
+			var Show = document.getElementsByClassName('show');
+			oSideul.style.width = 430 * Show.length + 'px';
+			var box = document.getElementById('slide-inner');
+			function scroll() {
+				box.scrollLeft += 10;
+				if (box.scrollLeft >= 430 * Show.length / 2) box.scrollLeft = 0;
+				time = setTimeout(scroll, box.scrollLeft % 430 ? 5 : 5000);
+			};
+			scroll();
+			box.onmouseover = function () {
+				clearTimeout(time);
+			}
+			box.onmouseout = function () {
+				scroll();
+			}
+			//最新优惠轮播
+			var ocfdiv = document.getElementById('cf-div');
+			ocfdiv.innerHTML += ocfdiv.innerHTML;
+			var Mask = document.getElementsByClassName('mask');
+			ocfdiv.style.width = 327 * (Mask.length - 2) + 'px';
+			var box2 = document.getElementById('cf-inner');
+			function scroll2() {
+				box2.scrollLeft += 3;
+				if (box2.scrollLeft >= 327 * (Mask.length / 2 - 1)) box2.scrollLeft = 0;
+				time2 = setTimeout(scroll2, box2.scrollLeft % 327 ? 5 : 5000);
+			};
+			scroll2();
+			box2.onmouseover = function () {
+				clearTimeout(time2);
+			}
+			box2.onmouseout = function () {
+				scroll2();
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+		<!-- 文档结构标签：
+            https://www.cnblogs.com/xiaohuochai/p/5087815.html
+            https://blog.csdn.net/dream_follower/article/details/81100959
+            https://blog.csdn.net/tomato__/article/details/50491528 -->
+		<header class="cf">
+			<img class="logo" src="images/logo.png" alt="这是酒店logo"> <!-- 替换元素 -->
+			<h1>枫和源酒店</h1>
+			<div class="service-tel">服务电话：<a href="tel:0592-8888888">0592-8888888</a></div>
+			<!-- Emmet: ctrl+shift+p 输入wrap 选择包围个别行 -->
+			<nav>
+				<a id="nav-first" href="#">首 页</a> <!-- a是行元素，默认情况下排成一行，超过一行自动换行 -->
+				<a href="#">酒店介绍</a>
+				<a href="#">客房服务</a>
+				<a href="#">客房预订</a>
+				<a href="#">酒店动态</a>
+				<a href="#">旅游接待</a>
+				<a href="#">招聘信息</a>
+				<a href="#">厦门旅游</a>
+				<a href="#">联系我们</a>
+			</nav>
+		</header>
+		<main>
+			<img src="images/banner1.png" alt=""> <!-- 不能用序号命名 -->
+
+			<section class="intro cf">
+				<!-- 此处用atricle标签有点勉强，section的语义讨论见https://www.zhihu.com/question/20227599 -->
+				<h2>酒店简介</h2>
+				<div class="introduction">
+					<p>
+						枫和源国际酒店集团(HI)，为总部设于枫和源集团公司旗下分支，拥有除美国外全球范围内“枫和源”商标的使用权。枫和源国际酒店集团经营管理着403间酒店，包括261间枫和源酒店，142间面向中端市场的“斯堪的克”酒店，以及与总部设在北美的枫和源酒店管理公司合资经营的、分布在12个国家中的18间“康拉德”（亦称“港丽”）酒店。它与枫和源酒店管理公司组合的全球营销联盟，令世界范围内双方旗下酒店总数超过了2700间，其中500多间酒店共同使用枫和源的品牌。枫和源国际酒店集团在全球80个国家内有着逾71000名雇员。枫和源经营旅馆业的座右铭是：“你今天对客人微笑了吗？”这也是他所著的《宾至如归》一书的核心内容。
+					</p>
+					<em class="features-star">星级酒店</em>
+					<em class="features-boutique">精品酒店</em>
+					<em class="features-chinese-western">中西合璧</em>
+				</div>
+				<div class="slide">
+					<div id="slide-inner">
+						<ul id="slide-ul" style="width: 2580px;">
+							<li>
+								<a href="#"><img class="show" src="images/show.png"></a>
+							</li>
+							<li>
+								<a href="#"><img class="show" src="images/service4.png"></a>
+							</li>
+							<li>
+								<a href="#"><img class="show" src="images/service2.png"></a>
+							</li>
+						</ul>
+					</div>
+					<a href="#"><i class="pre"></i><!-- <img id=abc src="images/pre.png"> --></a>
+					<a href="#"><i class="next"></i></a>
+				</div>
+			</section>
+
+			<section class="preferential">
+				<div class="cf">
+					<dl>
+						<dt>最新优惠</dt>
+						<div id="cf-inner">
+							<div id="cf-div" style="width: 11926px;">
+								<dd>
+									<a href="#">
+										<img src="images/preferential1.png">
+										<span class="specialprice">超大单间特价</span>
+										<b><strong>318元</strong>起</b>
+										<span class="mask"></span>
+									</a>
+								</dd>
+								<dd>
+									<a href="#">
+										<img src="images/preferential2.png">
+										<span class="specialprice">超大套房特价</span>
+										<b><strong>318元</strong>起</b>
+										<span class="mask"></span>
+									</a>
+								</dd>
+								<dd>
+									<a href="#">
+										<img src="images/preferential3.png">
+										<span class="specialprice">办公会议特价</span>
+										<b><strong>318元</strong>起</b>
+										<span class="mask"></span>
+									</a>
+								</dd>
+								<dd style="display: none;">
+									<a href="#"> <img src="">
+										<span class="specialprice"></span>
+										<b><strong></strong></b>
+										<span class="mask"></span>
+									</a>
+								</dd>
+							</div>
+						</div>
+					</dl>
+					<div class="arrow cf">
+						<a href="#" class="p-pre"></a>
+						<a href="#" class="p-next"></a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services cf">
+				<h2>特色服务</h2>
+				<ul>
+					<li class="first"><img class="circular" src="images/service1.png"><span>免费早餐</span></li>
+					<li><img class="circular" src="images/service2.png"><span>会议接待</span></li>
+					<li><img class="circular" src="images/service3.png"><span>旅游接待</span></li>
+					<li><img class="circular" src="images/service4.png"><span>免费停车</span></li>
+				</ul>
+			</section>
+
+			<section class="reservation">
+				<div>
+					<a class="reservation-button" href="#"><span>立即预定</span></a>
+					<p>24小时服务（节假日不休）</p>
+					<a class="reservation-tel" href="tel:0592-8888888">订房热线：0592-8888888</a>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<img class="banner" src="images/banner2.gif">
+			<div class="pagefooter cf">
+				<div class="contact">
+					<p>枫和源四星级酒店</p>
+					<p>地址：厦门经济特区厦禾路xxxx号</p>
+					<p>服务热线：0592-8888888</p>
+				</div>
+				<img class="logo-bottom" src="images/logo-bottom.png">
+				<div class="justify-right">
+					<nav>
+						<a href="/templets/aaa/#">网站首页</a><a>|</a>
+						<a href="/templets/aaa/#">酒店介绍</a><a>|</a>
+						<a href="/templets/aaa/#">客房服务</a><a>|</a>
+						<a href="/templets/aaa/#">客房预订</a>
+					</nav>
+					<p>© 2014 枫和源酒店集团版权所有</p>
+					<p>京ICP备13023281号</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
+
+<!-- Emmet：用缩写的方式快写html、css代码 -->

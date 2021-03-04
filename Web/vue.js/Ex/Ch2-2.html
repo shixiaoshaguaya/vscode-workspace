@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue.js第二章</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<!-- 017监听事件v-on -->
+		<button v-on:click="increase()">Click me</button>
+		<p>{{ counter }}</p>
+		<!-- 018从事件对象获取事件数据 -->
+		<p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
+		<!-- 019传递你自己的事件参数 -->
+		<button v-on:click="increase2(2, $event)">Click me2</button>
+		<p>{{ counter2 }}</p>
+		<!-- 020用事件修饰符来修改事件 -->
+		<p v-on:mousemove="updateCoordinates2">Coordinates2: {{ x2 }} / {{ y2 }} - <span v-on:mousemove.stop="">DEAD
+				SPOT</span></p>
+		<!-- 021监听键盘事件 -->
+		<input type="text" v-on:keyup.enter.space="alertMe">
+
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				counter: 0,
+				counter2: 0,
+				x: 0,
+				y: 0,
+				x2: 0,
+				y2: 0
+			},
+			methods: {
+				increase: function () {
+					this.counter++;
+				},
+				increase2: function (step, event) {
+					this.counter2 += step;
+				},
+				updateCoordinates: function (event) {
+					this.x = event.clientX;
+					this.y = event.clientY;
+				},
+				updateCoordinates2: function (event) {
+					this.x2 = event.clientX;
+					this.y2 = event.clientY;
+				},
+				alertMe: function () {
+					alert('Alert');
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

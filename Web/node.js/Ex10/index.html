@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>标题</title>
+</head>
+
+<body>
+	<div id="app">账号：{{user.name}}&emsp;密码：{{user.pwd}}</div>
+	<ul>
+		<li>下属</li>
+		{{each user.tags}}
+		<li>{{$value}}</li>
+		{{/each}}
+	</ul>
+</body>
+
+</html>

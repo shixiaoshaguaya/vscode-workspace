@@ -1,0 +1,98 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=Utf-8" />
+  <title>用户登录</title>
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/user_login.css" type="text/css" media="screen" />
+</head>
+
+<body>
+  <form id="form1" name="form1" action="login.aspx" method="post">
+    <div id="user_login">
+      <fieldset>
+        <legend><img src="images/loginTitle.png" alt="会员登录：填入您会员帐号与密码" /></legend>
+        <div class="loginbox">
+          <table class="table_f">
+            <tr>
+              <td width="30%" align="right">e-mail或帐号：</td>
+              <td width="48%"><input id="username" name="username" type="text" maxlength="20" /></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right">登录密码：</td>
+              <td><input name="pwd" type="password" id="pwd" class="w220" /></td>
+              <td><a href="resetpassword.html" id="a1">忘记密码？</a></td>
+            </tr>
+            <tr>
+              <td align="right">&nbsp;</td>
+              <td><input name="loginbutton" type="image" id="loginbutton" src="images/btnLogin.png" alt="立即登录"
+                  onclick="checkCookie()" /></td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+  <script>
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
+      }
+      return "";
+    }
+
+    function numberif(number) {
+      if (number <= 10) {
+        number = "0" + number;
+      }
+      return number;
+    }
+
+    function timeCookie() {
+      var time = new Date();
+      var Year = time.getFullYear();
+      var Month = time.getMonth();
+      var Day = time.getDate();
+      var Hours = time.getHours();
+      var Minutes = time.getMinutes();
+      var Seconds = time.getSeconds();
+      Month = numberif(Month);
+      Day = numberif(Day);
+      Hours = numberif(Hours);
+      Minutes = numberif(Minutes);
+      Seconds = numberif(Seconds);
+      setCookie("time", Year + "-" + Month + "-" + Day + "  " + Hours + ":" + Minutes + ":" + Seconds, 30);
+    }
+
+    window.onload = function () {
+      var time = getCookie("time");
+      timeCookie();
+      var user = getCookie("username");
+      if (user != "") {
+        alert("欢迎 " + user + " 上次访问时间为：" + time);
+      }
+    }
+
+    function checkCookie() {
+      var user = document.getElementById('username').value;
+      if (user != "" && user != null) {
+        setCookie("username", user, 30);
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+
+.content {
+	width: 964px;
+	height: auto;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.main-cont {
+	width: 870px;
+	padding:5px 0px;
+	margin: 0px auto;
+}
+
+.cont-tab {
+	width: 870px;
+	margin-bottom:5px;
+	border-left:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+
+.cont-tab td {
+	padding:10px 5px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	height:30px;
+	line-height:150%;
+}
+
+.cont-tab td.td1 {
+	font-size: 14px;
+	text-align: right;
+	width: 200px;	
+}
+
+.cont-tab td.td2 {
+	text-align: left;
+	vertical-align: middle;
+	width: 260px;
+}
+
+.cont-tab td.td3 {
+	width: auto;
+	text-align: left;	
+}
+
+.nes {
+	font-size: 12px; 
+	color: #c00; 
+	line-height: 30px;
+}
+
+.fle {
+	width: 205px;
+	font-weight: bold;
+	float: left;	
+}
+
+input.ipt-normal {
+	border-color: #a0b4c5;
+	background-color: #fff;
+}
+
+.cont-tab td.td2 .inp {
+	font-size: 14px;
+	line-height: 16px;
+	vertical-align: middle;
+	width: 95%;
+	height: 20px;
+	padding: 4px 2px 2px;
+	border-width: 1px;
+	border-style:solid ;
+}
+
+input.ipt-focus {
+	border-color: #727272;
+	background-color: #fffbd5;
+}
+
+.btn-jc {
+	font-size: 14px;
+	color: #1f79a7;
+	background-image: url(../images/bg.jpg); 
+	background-repeat: no-repeat;
+	background-position: -468px -146px;
+	vertical-align: middle;
+	width: 43px;
+	height: 26px;
+	margin-top: 2px;
+	border-width: 0px;
+	cursor: pointer;
+}
+
+.fri {
+	float: right;
+}
+
+.cont-tab td.td2 .sel {
+	font-size: 14px; 
+	color: #666;
+	width: 95%;	
+}
+
+.btn-submit {
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: -9px -219px;
+	width: 117px;
+	height: 41px;
+	margin: 10px;	
+	border-width: 0px; 
+	cursor: pointer;
+}
+
+td.codeimg img {
+	border: #e7e7e7 1px solid;
+	vertical-align: middle;
+}
+
+td.codeimg a {
+	text-decoration: underline;
+}
+
+#authcode{
+	border-top: #fff 0px groove; 
+	border-right: #fff 0px groove; 
+	border-left: #fff 0px groove;
+}
+
+.btn-submit-act {
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: -126px -219px;
+	width: 117px;
+	height: 41px;
+	margin: 0px;
+	border-width: 0px;
+	cursor: pointer;
+}
+
+

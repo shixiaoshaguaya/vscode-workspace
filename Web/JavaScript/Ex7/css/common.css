@@ -1,0 +1,29 @@
+﻿
+body, button, input, select, textarea {
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+	color:#333;
+}
+
+a:hover {
+	text-decoration: underline;
+	color:#c00;
+}
+
+legend {
+	color: #000;
+}
+
+/*fieldset, */
+img {
+	border: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		var ms = 0;
+		var secs = 0;
+		var mins = 0;
+		var hours = 0;
+		var timeoutId;
+		var isCounting = false;
+
+		function startTime() {
+			if (!isCounting) {
+				isCounting = true;
+				timeoutId = setInterval(countTime, 1);        //指定时间执行任务
+			}
+
+			document.getElementById("start").value = "计时中";
+
+		}
+		function stopTime() {
+			if (isCounting) {
+				isCounting = false;
+				clearTimeout(timeoutId); //清除指定id计时器
+				document.getElementById("start").value = "继续";
+			}
+
+		}
+
+		function countTime() {
+			ms += 1;
+			if (ms >= 100) {
+				secs += 1;
+				ms = 0;
+
+			}
+			if (secs >= 60) {
+				mins += 1;
+				secs = 0;
+			}
+			if (mins >= 60) {
+				hours += 1;
+				mins = 0;
+			}
+			if (hours >= 24) {
+				hours = 0;
+			}
+			document.getElementById("showTime").innerHTML = hours + " : " + mins + " : " + secs + " : " + ms;
+		}
+		function checkTime(time) {
+			if (time < 10)
+				time = "0" + time;
+			return time;
+		}
+		function resetTime() {
+			ms = 0;
+			secs = 0;
+			mins = 0;
+			hours = 0;
+		}
+		function clearTime() {
+			resetTime();
+			document.getElementById("showTime").innerHTML = hours + " : " + mins + " : " + secs + " : " + ms;
+			if (!isCounting)
+				document.getElementById("start").value = "开始计时";
+		}
+	</script>
+</head>
+
+<body>
+	<div id="txt"></div>
+	<button onclick="startTime()" ondblclick="stop()">开始</button>
+	<button onclick="stop()">暂停</button>
+</body>
+
+<html>

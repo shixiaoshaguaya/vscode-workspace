@@ -1,0 +1,204 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>注册新用户</title>
+	<link href="css/global.css" rel="stylesheet" type="text/css" />
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+	<div class="content">
+		<form action="register.aspx" method="post" name="form1" target="_blank" id="form1"
+			onsubmit="return checkForm();">
+			<div class="main-cont">
+				<table class="cont-tab">
+					<tbody>
+						<tr>
+							<td class="td1">用户名：<span class="nes">*</span></td>
+							<td class="td2">
+								<div class="fle">
+									<input class="inp ipt-normal" id="inp_uname" onmouseover="this.focus()"
+										onfocus="this.select();this.className='inp ipt-focus'"
+										onmouseout="this.className='inp ipt-normal'" maxlength="18" name="inp_uname"
+										onchange="checkInp_uname()" />
+								</div>
+								<input class="btn-jc fri" id="btn_chk" type="button" value="检测" />
+							</td>
+							<td class="td3">&nbsp;请输入6～8个字符，包括字母、数字和下划线</td>
+						</tr>
+						<tr>
+							<td class="td1">密　码：<span class="nes">*</span></td>
+							<td class="td2">
+								<input class="inp ipt-normal" id="password" type="password" onmouseover="this.focus()"
+									onfocus="this.select();this.className='inp ipt-focus'"
+									onmouseout="this.className='inp ipt-normal'" maxlength="16" name="password"
+									onchange="checkPassword()" />
+							</td>
+							<td class="td3">&nbsp;密码由6-16个字符组成，请使用英文字母加数字的组合密码</td>
+						</tr>
+						<tr>
+							<td class="td1">再次输入密码：<span class="nes">*</span></td>
+							<td class="td2">
+								<input class="inp ipt-normal" id="passwordconfirm" type="password"
+									onmouseover="this.focus()" onfocus="this.select();this.className='inp ipt-focus'"
+									onmouseout="this.className='inp ipt-normal'" maxlength="16" name="passwordconfirm"
+									onchange="checkPasswordconfirm()" />
+							</td>
+							<td class="td3">&nbsp;请再输入一遍您上面输入的密码</td>
+						</tr>
+						<tr>
+							<td class="td1">密码保护问题：<span class="nes">*</span></td>
+							<td class="td2">
+								<select class="sel" id="secproblem" name="secproblem">
+									<option value="0" selected="selected">请选择密码提示问题</option>
+									<option value="您母亲的姓名是?">您母亲的姓名是?</option>
+									<option value="您父亲的姓名是?">您父亲的姓名是?</option>
+									<option value="您最要好朋友的姓名是?">您最要好朋友的姓名是?</option>
+									<option value="您的出生地是?">您的出生地是?</option>
+								</select>
+							</td>
+							<td class="td3">&nbsp;从下拉列表框中选择一个密码保护问题</td>
+						</tr>
+						<tr>
+							<td class="td1">密码保护问题答案：<span class="nes">*</span></td>
+							<td class="td2">
+								<input class="inp ipt-normal" id="secanswer" maxlength="30" name="secanswer" />
+							</td>
+							<td class="td3">&nbsp;输入密码保护问题的答案</td>
+						</tr>
+						<tr>
+							<td class="td1">性　别：<span class="nes">*</span></td>
+							<td class="td2">
+								<label><input type="radio" name="sex" value="man" id="sex_0"
+										checked="checked" />男</label>&nbsp;&nbsp;
+								<label><input type="radio" name="sex" value="woman" id="sex_1" />女</label>
+							</td>
+							<td class="td3">&nbsp;</td>
+						</tr>
+						<tr>
+							<td class="td1">出生日期：<span class="nes">*</span></td>
+							<td class="td2">
+								<input class="inp ipt-normal" id="year" style="width: 80px" maxlength="4" name="year"
+									onchange="checkYear()" /> 年
+								<input class="inp ipt-normal" id="month" style="width: 45px" maxlength="2" name="month"
+									onchange="checkMonth()" /> 月
+								<input class="inp ipt-normal" id="day" style="width: 45px" maxlength="2" name="day"
+									onchange="checkDay()" /> 日
+							</td>
+							<td class="td3">&nbsp;</td>
+						</tr>
+						<tr>
+							<td class="td1">请输入右边的字符：<span class="nes">*</span></td>
+							<td class="td2">
+								<input class="inp ipt-normal" id="authcode" name="authcode"
+									onblur="this.className='inp ipt-normal'" onfocus="this.className='inp ipt-focus'"
+									maxlength="16" />
+							</td>
+							<td class="td3">
+								<span class="td2 codeimg"><img class="" id="vcode_img" src="images/CodeImg.gif" /><a
+										href="#">看不清楚，换一张</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">&nbsp;</td>
+							<td class="td2">
+								<label><input id="servitems" type="checkbox" checked="checked"
+										name="servitems" />我已阅读并接受服务条款</label>
+							</td>
+							<td class="td3">
+								<input class="btn-submit" title="创建帐号" type="button"
+									onblur="this.className='btn-submit'" onfocus="this.className='btn-submit-act'"
+									name="input" onclick="btn()" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</div>
+	<script>
+		//用户名
+		var inp_uname = document.getElementsByClassName('td3')[0];
+		function checkInp_uname() {
+			var name = document.getElementById('inp_uname').value;
+			var pattName = /[a-zA-Z0-9\_]{6,8}/;
+			if (pattName.test(name)) {
+				inp_uname.style.color = "black";
+			} else {
+				inp_uname.style.color = "red";
+			}
+		}
+		//密　码
+		var password = document.getElementsByClassName('td3')[1];
+		function checkPassword() {
+			var password2 = document.getElementById('password').value;
+			var password3 = /(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}/;
+			if (password3.test(password2)) {
+				password.style.color = "black";
+			} else {
+				password.style.color = "red";
+			}
+		}
+		//再次输入密码
+		var passwordconfirm = document.getElementsByClassName('td3')[2];
+		function checkPasswordconfirm() {
+			var passwordconfirm2 = document.getElementById('passwordconfirm').value;
+			var passwordconfirm3 = document.getElementById('password').value;
+			if (passwordconfirm2 != passwordconfirm3) {
+				passwordconfirm.innerHTML = "两次输入的密码不相同";
+				passwordconfirm.style.color = "red";
+			} else {
+				passwordconfirm.innerHTML = "请再输入一遍您上面输入的密码";
+				passwordconfirm.style.color = "black";
+			}
+		}
+		//出生日期
+		// var date = document.getElementsByClassName('td3')[6];
+		// function checkYear() {
+		//   var year = document.getElementById('year').value;
+		//   var year2 = /?:15\d{2}|20(?:[0-1]\d|4[0])/;
+		//   if ((!year2.text(year))) {
+		//     date.innerHTML = "出生日期格式不正确";
+		//     date.style.color = "red";
+		//   }
+		// }
+		// function checkMonth() {
+		//   var month = document.getElementById('month').value;
+		//   var month2 = /(?:0[1-9]|1[0-2])/;
+		//   if (!(month2.text(month))) {
+		//     date.innerHTML = "出生日期格式不正确";
+		//     date.style.color = "red";
+		//   }
+		// } function checkDay() {
+		//   var day = document.getElementById('day').value;
+		//   var day2 = /(?:0[1-9]|[12]\d|3[01])/;
+		//   if (!(day2.text(day))) {
+		//     date.innerHTML = "出生日期格式不正确";
+		//     date.style.color = "red";
+		//   }
+		// }
+
+		function btn() {
+			var name = document.getElementById('inp_uname').value;
+			var password2 = document.getElementById('password').value;
+			var passwordconfirm2 = document.getElementById('passwordconfirm').value;
+			var secanswer = document.getElementById('secanswer').value;
+			var year = document.getElementById('year').value;
+			var month = document.getElementById('month').value;
+			var day = document.getElementById('day').value;
+			var authcode = document.getElementById('authcode').value;
+			// if (name == "" && password2 == "" && passwordconfirm2 == "" && secanswer == "" && year == "" && month == "" && day == "" && authcode == "") {
+			//   alert("还有必填项未填");
+			// }else{
+			//   alert("提交成功！");
+			// }
+
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+body, p {
+    margin: 0;
+}
+
+/* 消除浮动的影响 开始 */
+.cf:before,
+.cf:after {
+    /* For modern browsers */
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    /* For IE 6/7 (trigger hasLayout) */
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+/* 消除浮动的影响 结束 */
+
+body {
+    font: 14px "Helvetica Neue", 微软雅黑, "Microsoft Yahei", Helvetica, Arial, sans-serif;
+    color: #444;
+}
+
+/* 去掉所有a标签的下划线 */
+a {
+    text-decoration: none;
+}
+
+.article {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.6em;
+    font-weight: normal;
+}
+
+.pre-next-page {
+    padding: 8px 0px;
+    color: #444;
+    line-height: 16px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.pre,
+.next {
+    color: #007dbb;
+}
+
+.pre {
+    float: left;
+}
+
+.pre:before, .next:after {
+    font-size: 16px;
+    color: #444;
+    cursor: auto;
+}
+
+.pre:before {
+    content: "< ";
+}
+
+.next {
+    float: right;
+}
+
+.next::after {
+    content: " >";
+}
+
+.arc-body {
+    margin: 10px 0;
+    line-height: 1.6em;
+}
+
+.arc-body img {
+    width: 63px;
+    height: 76px;
+    padding-right: 10px;
+    float: left;
+}
+
+p.pb {
+    padding: 0 0 12px;
+}
+
+code {
+    display: inline-block;
+    font-size: 100%;
+    color: rgb(51, 51, 51);
+    font-family: "Helvetica Neue", 微软雅黑, "Microsoft Yahei", Helvetica, Arial, sans-serif;
+    margin: auto 2px;
+    padding: 0px 4px;
+    border: 1px solid #ddd;
+    background: rgb(246, 246, 246);
+    border-radius: 2px;
+}
+
+.arc-body a {
+    color: #007dbb;
+}
+
+.arc-list {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.arc-list dt {
+    padding-left: 12px;
+    background-color: #eee;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    line-height: 2.8em;
+}
+
+.arc-list dd {
+    line-height: 38px;
+    margin-left: 0;
+    padding-left: 12px;
+}
+
+.arc-list a, .arc-list span {
+    color: #007dbb;
+}
+
+.arc-list dd:nth-child(odd) {
+    background: #f4f4f4;
+}

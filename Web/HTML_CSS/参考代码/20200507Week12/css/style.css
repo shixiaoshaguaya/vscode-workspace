@@ -1,0 +1,95 @@
+/* 这些代码是从微信网页搬下来的，除了对图片文件重新命名，基本上没有太大的改动 */
+
+body {
+    margin: 0;
+    font: 14px/1.6 -apple-system-font, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif;
+}
+
+li,
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #609700;
+    cursor: pointer;
+    outline: none;
+}
+
+.wrap {
+    background: url(../images/bg-wrap.jpg) repeat-x;
+}
+
+.head {
+    width: 968px;
+    height: 75px;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.head .logo {
+    float: left;
+    margin-top: 14px;
+    height: 44px;
+}
+
+.head .nav {
+    float: right;
+    padding-top: 21px;
+}
+
+.head .nav li {
+    float: left;
+}
+
+.head .nav a {
+    display: inline-block;
+    padding-left: 10px;
+    margin: 0 2px;
+    line-height: 33px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.head .nav a span {
+    display: inline-block;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
+.head .nav a:hover {
+    font-weight: lighter;
+    background: url(../images/bg-menu-over.png) no-repeat;
+}
+
+.head .nav a:hover span {
+    background: url(../images/bg-menu-over.png) no-repeat 100%;
+}
+
+.head .nav a.curr,
+.head .nav a:active {
+    font-weight: 700;
+    text-decoration: none;
+    background: url(../images/bg-menu-home.png) no-repeat;
+}
+
+.head .nav a.curr span,
+.head .nav a:active span {
+    background: url(../images/bg-menu-home.png) no-repeat 100%;
+}
+
+.new-style {
+    padding-right: 10px;
+}
+
+.head .nav .new-style:hover {
+    background: url(../images/bg-menu-over-left.png) no-repeat, url(../images/bg-menu-over.png) right no-repeat;
+}

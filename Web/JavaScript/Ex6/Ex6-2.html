@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		var proData = { "1": ["", "项208", "项504", "项602"], "2": ["", "公教308", "公教402", "公教607"] };
+		window.onload = function () {
+			var Pro = document.getElementById('pro_id');
+			var City = document.getElementById('city_id');
+			Pro.onchange = function () {
+				var aRrayCity = proData[this.value];
+				City.options.length = 0;
+				for (var i = 0; i < aRrayCity.length; i++) {
+					var oOption = document.createElement('option');
+					oOption.innerHTML = aRrayCity[i];
+					oOption.value = i;
+					City.appendChild(oOption)
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<td>教学楼</td>
+	<select name="province" id="pro_id" style="width: 150px;">
+		<option></option>
+		<option value="1">项南楼</option>
+		<option value="2">公共教学大楼</option>
+	</select>
+	<td>教室</td>
+	<select name="city" id="city_id" style="width: 150px;"></select>
+</body>
+
+</html>

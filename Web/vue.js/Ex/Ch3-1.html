@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue.js第三章</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<!-- 040 用v-if来做条件渲染 -->
+		<p>040 用v-if来做条件渲染</p>
+		<p v-if="show">You can see me! <span>Hello!</span></p>
+		<p v-else>Now you see me!</p>
+		<p>Do you also see me?</p>
+		<button @click="show = !show">Switch</button>
+		<!-- 041 代替v-if语法 -->
+		<p>041 代替v-if语法</p>
+		<p v-if="show1">You can see me! <span>Hello!</span></p>
+		<p v-else>Now you see me!</p>
+		<template v-if="show1">
+			<h1>Heading</h1>
+			<p>Inside a template</p>
+		</template>
+		<p>Do you also see me?</p>
+		<button @click="show1 = !show1">Switch</button>
+		<!-- 042 不要用v-show解绑 -->
+		<p>042 不要用v-show解绑</p>
+		<p v-if="show2">You can see me! <span>Hello!</span></p>
+		<p v-else>Now you see me!</p>
+		<template v-if="show2">
+			<h1>Heading</h1>
+			<p>Inside a template</p>
+		</template>
+		<p v-show="show2">Do you also see me?</p>
+		<button @click="show2 = !show2">Switch</button>
+		<!-- 043 用v-for来渲染列表 -->
+		<p>043 用v-for来渲染列表</p>
+		
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				show: true,
+				show1: true,
+				show2: true
+			}
+		})
+	</script>
+</body>
+
+</html>

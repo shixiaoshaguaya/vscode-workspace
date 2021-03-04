@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.menu {
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid #36F;
+}
+
+.menu h4 {
+  text-indent: 20px;
+  color: #FFF;
+  background: #0C0;
+  height: 30px;
+  line-height: 30px;
+}
+
+.menu li {
+  padding-left: 10px;
+  border-bottom: 1px solid #CCC;
+}
+
+.show,
+.hide {
+  height: 40px;
+  line-height: 40px;
+}
+
+.show span {
+  float: left;
+  margin-left: 10px;
+}
+
+.show a {
+  float: left;
+  margin-left: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.hide input {
+  height: 25px;
+  line-height: 25px;
+}
+
+.img-light {
+  margin-top: 10px;
+  height: 16px;
+  width: 16px;
+  background-image: url(../images/edit-light.svg);
+}
+
+.img-dark {
+  margin-top: 10px;
+  height: 16px;
+  width: 16px;
+  background-image: url(../images/edit-dark.svg);
+}

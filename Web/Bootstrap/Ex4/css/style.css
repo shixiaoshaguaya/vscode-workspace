@@ -1,0 +1,462 @@
+body,
+h2,
+p,
+ul,
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 消除浮动造成的影响 */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    /* For IE 6/7 (trigger hasLayout) */
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+/* 消除浮动的影响到此结束 */
+
+body {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    background: #282828;
+}
+
+/* 布局 */
+.wrap {
+    width: 1440px;
+    margin: 0 auto;
+    background: url(../images/PageBackground.png);
+}
+
+header,
+.intro,
+.services,
+.pagefooter {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* 页头 */
+.logo {
+    float: left;
+    margin-top: 33px;
+}
+
+h1 {
+    float: left;
+    width: 148px;
+    height: 46px;
+    margin-top: 36px;
+    margin-left: 13px;
+    text-indent: -1000em;
+    background: url(../images/HotleName.png) no-repeat;
+}
+
+.service-tel {
+    float: right;
+    margin-top: 32px;
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.service-tel a {
+    color: #b40000;
+    text-decoration: none;
+}
+
+nav {
+    float: left;
+    margin: 14px 0 23px 62px;
+    /* margin-top: 14px;
+    margin-left: 62px;
+    margin-bottom: 23px; */
+    min-width: 600px;
+}
+
+nav a {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    /* 让文本垂直居中 */
+    margin-right: 24px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    color: #b40000;
+    text-decoration: underline;
+}
+
+#nav-first {
+    margin-right: 14px;
+    padding: 0 20px;
+    color: #fff;
+    background-color: #b40000;
+}
+
+main {
+    /* text-align: center; */
+}
+
+.banner {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+/* 酒店简介开始 */
+.intro {
+    padding: 20px 0 42px;
+}
+
+h2,
+dt {
+    margin-left: 4px;
+    width: 167px;
+    /* height: 38px; */
+    padding-top: 9px;
+    padding-bottom: 13px;
+    line-height: 1;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    background: url(../images/bg-subtitle.png);
+}
+
+.introduction {
+    float: left;
+    margin-top: 10px;
+    margin-left: 7px;
+    width: 435px;
+    /* 423px */
+}
+
+.introduction p {
+    margin-left: 7px;
+    margin-right: 9px;
+    text-indent: 2em;
+    line-height: 31px;
+}
+
+.features-star,
+.features-boutique,
+.features-chinese-western {
+    float: left;
+    border-radius: 50%;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+}
+
+.features-star {
+    width: 103px;
+    height: 103px;
+    margin-top: 23px;
+    margin-left: 23px;
+    line-height: 103px;
+    color: #fff;
+    background: #0495d6;
+}
+
+.features-boutique {
+    width: 116px;
+    height: 116px;
+    margin-top: 20px;
+    margin-left: 33px;
+    line-height: 116px;
+    background: #f3e443;
+}
+
+.features-chinese-western {
+    width: 127px;
+    height: 127px;
+    margin-top: 9px;
+    margin-left: 32px;
+    line-height: 127px;
+    color: #fff;
+    background: #ef0708;
+}
+
+.hidden {
+    display: none;
+}
+
+.slide {
+    float: right;
+    margin-top: 8px;
+    margin-right: 26px;
+    padding: 10px;
+    box-shadow: 0px 0px 3px 3px #c5c3a9;
+    background: #fff;
+}
+
+.slide ul {
+    list-style: none;
+}
+
+.slide img {
+    float: right;
+}
+
+/* #abc {
+    display: inine-block;  block  inline 
+    margin-top: -50px;
+} */
+
+.pre,
+.next {
+    margin-top: -242px;
+    opacity: 0.8;
+    width: 26px;
+    height: 40px;
+}
+
+.pre {
+    float: left;
+    background: #fff url(../images/pre.png) 6px 7px no-repeat;
+}
+
+.pre:hover {
+    background-image: url(../images/pre-hover.png);
+}
+
+.next {
+    float: right;
+    background: #fff url(../images/next.png) 9px 7px no-repeat;
+}
+
+/* 酒店简介结束 */
+
+/* 最新优惠开始 */
+
+.preferential {
+    position: relative;
+    padding: 22px 0 35px;
+    background: #e1dfc3;
+}
+
+.preferential div {
+    margin-right: -50px;
+}
+
+.preferential dl {
+    padding: 0 243px;
+}
+
+.preferential dd {
+    float: left;
+    position: relative;
+    margin: 16px 27px 0 0;
+    width: 300px;
+    height: 190px;
+    overflow: hidden;
+}
+
+.preferential a {
+    font-size: 12px;
+    color: #fff;
+}
+
+.specialprice {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 44px;
+    width: 176px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.preferential b {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: normal;
+    background: #0495d6;
+}
+
+.preferential strong {
+    margin-left: 8px;
+    margin-right: 6px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.arrow {
+    position: absolute;
+    top: 169px;
+    left: 220px;
+    width: 1000px;
+    height: 24px;
+}
+
+.p-pre,
+.p-next {
+    width: 10px;
+    height: 24px;
+}
+
+.p-pre {
+    float: left;
+    margin-left: 3px;
+    background: url(../images/pre.png);
+}
+
+.p-next {
+    float: right;
+    margin-right: 6px;
+    background: url(../images/next.png);
+}
+
+/* 最新优惠结束 */
+
+/* 特色服务 */
+.services {
+    padding-bottom: 45px;
+}
+
+.services h2 {
+    margin-top: 30px;
+    margin-bottom: 48px;
+}
+
+.services li {
+    float: left;
+    margin-left: 47px;
+    text-align: center;
+}
+
+.services img {
+    display: block;
+}
+
+dd.first {
+    margin-left: 39px;
+}
+
+.circular {
+    margin-bottom: 18px;
+    border: 5px solid #ff9b9b;
+    border-radius: 50%;
+    box-shadow: 0 0 7px #d2d0bf;
+}
+
+/* 24小时服务 */
+.reservation {
+    padding: 0 220px;
+    height: 105px;
+    background: url(../images/reservation_bg.png);
+}
+
+.reservation-button {
+    float: right;
+    margin-top: 33px;
+    margin-right: 125px;
+    width: 136px;
+    height: 40px;
+    background-color: #fff;
+}
+
+.reservation-button span {
+    display: block;
+    margin: 1px;
+    font-size: 20px;
+    color: #b40000;
+    text-align: center;
+    line-height: 34px;
+    border: 2px solid #b40000;
+}
+
+.reservation p {
+    margin-bottom: 19px;
+    margin-left: 50px;
+    padding-top: 24px;
+    line-height: 1;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.reservation-tel {
+    padding-left: 50px;
+    line-height: 1;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* 这是页脚的样式 */
+footer {
+    position: relative;
+    padding-bottom: 10px;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #170000;
+}
+
+.contact {
+    float: left;
+    margin-top: 32px;
+    margin-left: 4px;
+    line-height: 25px;
+}
+
+.justify-right {
+    float: right;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.justify-right p {
+    margin-right: 4px;
+    margin-bottom: 8px;
+}
+
+footer nav {
+    margin-right: 2px;
+    margin-bottom: 62px;
+    margin-top: 0;
+    font-size: 0;
+}
+
+footer nav a {
+    float: none;
+    margin: 0 5px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #d7d0d0;
+}
+
+.logo-bottom {
+    position: absolute;
+    left: 50%;
+    margin-left: -45.5px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放</title>
+    <script src="./js/axios.min.js"></script>
+    <style>
+        img {
+            width: 110px;
+            height: 110px;
+        }
+
+        a {
+            float: left;
+            padding-right: 10px;
+            padding-bottom: 5px;
+        }
+
+        .head {
+            width: 360px;
+            height: 500px;
+            margin: auto;
+        }
+
+        .div1 {
+            width: 110px;
+            height: 32px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h3>推荐歌单</h3>
+        <a href="#" onclick="huoqugedaid(0)"><img>
+            <div class="div1"></div>
+        </a>
+        <a href="#" onclick="huoqugedaid(1)"><img>
+            <div class="div1"></div>
+        </a>
+        <a href="#" onclick="huoqugedaid(2)"><img>
+            <div class="div1"></div>
+        </a>
+        <a href="#" onclick="huoqugedaid(3)"><img>
+            <div class="div1"></div>
+        </a>
+        <a href="#" onclick="huoqugedaid(4)"><img>
+            <div class="div1"></div>
+        </a>
+        <a href="#" onclick="huoqugedaid(5)"><img>
+            <div class="div1"></div>
+        </a>
+        <audio id="audio" controls autoplay onended="xiaoyige()">
+            <source src="" type="audio/mpeg">
+            您的浏览器不支持 audio 元素。
+        </audio>
+        <button onclick="xiaoyige()">下一首</button>
+    </div>
+
+    <script>
+        // http://localhost:3000/user/playlist?uid=1300013677
+        // var uar = 'http://localhost:3000';
+        var uar = 'http://81.68.83.24:3000';
+        var tuijiangeda;
+        var gedaxiangxing;
+        var url;
+        var songurl = new Array();
+        window.onload = function () {
+            axios.get(uar + '/personalized?limit=6')
+                .then(function (response) {
+                    tuijiangeda = response.data.result;
+                    for (var i = 0; i < tuijiangeda.length; i++) {
+                        document.getElementsByTagName('img')[i].src = tuijiangeda[i].picUrl;
+                        document.getElementsByTagName('div')[i + 1].innerHTML = tuijiangeda[i].name;
+                    }
+                })
+                .catch(function (error) {
+
+                });
+        }
+        var songid = '1462410538';
+        song(songid);
+        var gedaid = '5366707295';
+        detail(gedaid);
+
+        function song(id) {
+            axios.get(uar + '/song/url?id=' + id)
+                .then(function (response) {
+                    url = response.data.data[0].url;
+                    var i = 0;
+                    songurl[i] = url;
+                    i++;
+                    xiaoyige();
+                    // if (id == '1462410538') {
+                    //     document.getElementById('audio').src = url;
+                    // }
+                })
+                .catch(function (error) {
+
+                });
+        };
+        function detail(id) {
+            axios.get(uar + '/playlist/detail?id=' + id)
+                .then(function (response) {
+                    gedaxiangxing = response.data.playlist.tracks;
+                    huoqugedasongid();
+                })
+                .catch(function (error) {
+
+                });
+        }
+        function huoqugedaid(i) {
+            var gedaid = tuijiangeda[i].id;
+            detail(gedaid);
+            huoqugedasongid();
+        }
+
+        function huoqugedasongid() {
+            for (var i = 0; i < gedaxiangxing.length; i++) {
+                var songid = gedaxiangxing[i].id;
+                song(songid);
+            }
+        }
+        var i = 0;
+        function xiaoyige() {
+            document.getElementById('audio').src = songurl[i];
+            if (i < songurl.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

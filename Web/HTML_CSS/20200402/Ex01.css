@@ -1,0 +1,49 @@
+h1{
+	font-size: 26px;
+	line-height: 1.6em;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.indexes{
+    padding: 15px 0px;
+    color: #444;
+    line-height: 0px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+.indexes .icon{
+    font-size: 16px;
+}
+a{
+	color: #007dbb;
+	text-decoration: none;
+}
+.indexes .right{
+    display: block;
+    float: right;
+}
+#arc{
+    margin-top: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+#arc dt{
+	padding-left: 12px;
+	background-color: #eee;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	line-height: 2.8em;
+}
+#arc dd {
+    margin-left: 0px;
+    line-height: 38px;
+    padding-left: 12px;
+}
+#arc dd span {
+    color: #007dbb;
+}
+.list {
+    background-color: #f4f4f4 !important;
+}

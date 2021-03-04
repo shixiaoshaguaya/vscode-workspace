@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  max-width: 650px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.entirety {
+  padding: 20px 15px 15px;
+  display: grid;
+  grid-template-columns: 384px;
+  grid-template-rows: 204px 109px 49px;
+  grid-row-gap: 10px;
+}
+
+.entirety .head .sub-cover {
+  float: left;
+  position: relative;
+}
+
+.entirety .head img {
+  width: 100px;
+  height: 140px;
+}
+
+.entirety .head .cover-count {
+  position: absolute;
+  right: 3px;
+  bottom: 6px;
+  color: #fff;
+  font-size: 11px;
+}
+
+.hr1 {
+  display: grid;
+  justify-content: end;
+  grid-template-columns: 269px;
+  grid-template-rows: 32px 21px 39px 42px 40px;
+  grid-row-gap: 1.4px;
+}
+
+.title1 {
+  color: #fff;
+  font-size: 23px;
+}
+
+.title2 {
+  color: #fff;
+  font-size: 15px;
+}
+
+#root {
+  display: block;
+  font-size: 13px;
+  margin: 10px 0 5px;
+}
+
+.root {
+  color: #9D5F00;
+  display: inline-block;
+  background-color: #FEF0B3;
+  background: linear-gradient(#FFF3E6, #FEF0B3);
+  padding-left: 9px;
+  padding-right: 11px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  line-height: 24px;
+  min-width: 48px;
+  box-sizing: border-box;
+}
+
+.root2 {
+  color: #9D5F00;
+  background: linear-gradient(45deg, #FFD395, #FEC36E);
+  line-height: 24px;
+  display: inline-block;
+  margin-left: -3px;
+  padding: 0 10px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  min-width: 90px;
+  box-sizing: border-box;
+}
+
+.meta {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  padding: 5px 0 5px;
+}
+
+.item {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.item a {
+  background-color: #fff;
+  color: #191919;
+  font-size: 13px;
+  display: flex;
+  border-radius: 4px;
+  height: 30px;
+  width: 130px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.hr1 .item a img{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+/*评分*/
+.entirety .score {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 11px 16px 14px;
+}
+
+.entirety .score .trademark {
+  font-size: 11px;
+  color: #fff;
+  position: relative;
+  line-height: 27px;
+  margin-bottom: 1px;
+}
+
+.score .trademark em {
+  display: inline-block;
+  font-size: 10px;
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  font-style: normal;
+  transform: scale(0.7);
+}
+
+.score .write {
+  float: right;
+  color: #fff;
+  border: 1px solid #f9f9f9;
+  border-radius: 3px;
+  line-height: 1;
+  padding: 6px 5px;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 350px;
+  height: 55px;
+}
+
+.content .num {
+  color: #fff;
+  font-size: 35px;
+  display: inline-block;
+}
+
+.content em {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+
+}
+
+/*tail部分*/
+.entirety .tail {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 13px 15px;
+}
+.entirety .tail img{
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+}
+
+.entirety .tail .text {
+  vertical-align:text-top;
+  font-size: 16px;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.entirety .tail .text1 {
+  color: rgba(255, 255, 255, 0.7);
+  vertical-align: middle;
+  float: right;
+  line-height: 22px;
+}
+
+.entirety .tail .text1:after {
+  content: '>';
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}

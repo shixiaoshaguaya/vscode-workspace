@@ -1,0 +1,59 @@
+﻿body,dl,dt,dd{
+	padding:0px;
+	margin:0px;
+	list-style-type: none;
+}
+img{ border:none;}
+#main_pban{ background-color:#000000;}
+
+#main_pban {
+	OVERFLOW: hidden; WIDTH: 545px; POSITION: relative; HEIGHT: 416px;
+}
+#main_pban .pban_area {
+	POSITION: relative; HEIGHT: 416px
+}
+#main_pban .pban_area DT {
+	DISPLAY: block; Z-INDEX: 3; WIDTH: 34px; POSITION: absolute; TOP: 358px; HEIGHT: 34px
+}
+#main_pban .pban_area DT A {
+	DISPLAY: block; POSITION: relative; HEIGHT: 34px
+}
+#main_pban .pban_area DT A:hover SPAN {
+	BORDER-RIGHT: #ff3366 3px solid; BORDER-TOP: #ff3366 3px solid; BORDER-LEFT: #ff3366 3px solid; WIDTH: 28px; BORDER-BOTTOM: #ff3366 3px solid; POSITION: absolute; HEIGHT: 28px
+}
+#main_pban .pban_area DT A:focus SPAN {
+	BORDER-RIGHT: #ff3366 3px solid; BORDER-TOP: #ff3366 3px solid; BORDER-LEFT: #ff3366 3px solid; WIDTH: 28px; BORDER-BOTTOM: #ff3366 3px solid; POSITION: absolute; HEIGHT: 28px
+}
+#pban_num_3 {
+	LEFT: 366px
+}
+#pban_num_4 {
+	LEFT: 401px
+}
+#pban_num_5 {
+	LEFT: 436px
+}
+#pban_num_6 {
+	LEFT: 471px
+}
+#pban_num_7 {
+	LEFT: 506px;
+}
+#pban_num_2 {
+	LEFT: 331px;
+}
+#pban_num_1 {
+	LEFT: 296px;
+}
+#main_pban .pban_area .pban_off A SPAN {
+	WIDTH: 34px; POSITION: absolute; HEIGHT: 34px
+}
+#main_pban .pban_area .pban_on A SPAN {
+	BORDER-RIGHT: #ff3366 3px solid; BORDER-TOP: #ff3366 3px solid; BORDER-LEFT: #ff3366 3px solid; WIDTH: 28px; BORDER-BOTTOM: #ff3366 3px solid; POSITION: absolute; HEIGHT: 28px
+}
+/* #main_pban .pban_area DD {
+	
+} */
+#main_pban .pban_area DD P.sub_pban {
+	DISPLAY: block
+}

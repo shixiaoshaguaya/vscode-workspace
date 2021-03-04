@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#head {
+			margin-left: 100px;
+			float: left;
+			color: #B0A59F;
+		}
+
+		#a {
+			margin-left: 148px;
+			width: 820px;
+		}
+
+		li {
+			float: left;
+			display: grid;
+			margin: 0px 50px;
+			margin-bottom: 10px;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+			width: 64px;
+		}
+
+		.img1 {
+			width: 7px;
+			height: 5px;
+			margin-left: 50px;
+			padding-left: 7px;
+			background-image: url(img/T1cn1BXaBEXXXXXXXX-93-239.png);
+			background-position: -57px -14px;
+		}
+
+		.img2 {
+			width: 7px;
+			height: 5px;
+			margin-left: 50px;
+			padding-left: 7px;
+			background-image: url(img/T1cn1BXaBEXXXXXXXX-93-239.png);
+			background-position: -48px -14px;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var ul = document.getElementById('u');
+			var a = document.getElementById('b');
+			var f = true;
+			var c = ['意大利', '奥地利', '丹麦', '法国', '西班牙', '韩国', '泰国', '荷兰', '新西兰', '德国', '澳大利亚'];
+			a.onclick = function () {
+				if (f) {
+					for (var i = 0; i < c.length; i++) {
+						var a1 = document.createElement("a");
+						var li = document.createElement("li");
+						var text = document.createTextNode(c[i]);
+						a1.setAttribute("href", "#");
+						a1.appendChild(text);
+						li.appendChild(a1);
+						ul.appendChild(li);
+					}
+					a.innerHTML = "收起";
+					a.classList.remove('img1');
+					a.classList.add('img2');
+					f = false;
+				} else {
+					i = 0;
+					while (i <= ul.childNodes.length) {
+						ul.removeChild(ul.lastChild);
+						i++;
+					}
+					a.innerHTML = "更多";
+					a.classList.remove('img2');
+					a.classList.add('img1');
+					f = true;
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="head">产地：</div>
+	<div id="a">
+		<ul id="u">
+			<li><a href="#">爱尔兰</a></li>
+			<li><a href="#">英国</a></li>
+			<li><a href="#">波兰</a></li>
+			<li><a href="#">马来西亚</a></li>
+		</ul>
+	</div>
+	<a id="b" class="img1" href="#">更多</a>
+</body>
+
+</html>
