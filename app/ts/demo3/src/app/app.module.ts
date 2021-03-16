@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
 import { ProductComponent } from './components/product/product.component';
 import { FiveComponent } from './components/five/five.component';
+import { FiveExComponent } from './components/five-ex/five-ex.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FiveComponent } from './components/five/five.component';
     AppComponent,
     NewsComponent,
     ProductComponent,
-    FiveComponent
+    FiveComponent,
+    FiveExComponent
   ],
   imports: [
     BrowserModule,
