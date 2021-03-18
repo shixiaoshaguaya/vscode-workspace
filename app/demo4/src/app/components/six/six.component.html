@@ -1,0 +1,27 @@
+<p>six works!</p>
+<h2>{{title}}</h2>
+<div [innerHTML]="h"></div>
+<p [innerHTML]="h"></p>
+<input  type="text" name="myname" [id]="myid" [value]="myvalue"/>
+<input  type="text" [name]="myname" [id]="myid" [value]="myvalue"/>
+<h5 *ngIf="title=='我的书城'">学号：{{student.stuno}} 姓名：{{student.name}} 年龄：{{student.age}}</h5>
+<hr>
+<ul>
+    <li *ngFor="let item of products">{{item}}</li>
+</ul>
+<hr>
+<ul>
+    <li *ngFor="let item of pro1">{{item}}</li>
+</ul>
+<hr>
+<ol>
+    <li *ngFor="let item of stus">{{item.stuno}}--{{item.name}}--{{item.age}}</li>
+</ol>
+<hr>
+<ol>
+    <li *ngFor="let item of stus2">{{item.stuno}}--{{item.name}}--{{item.age}}
+        <ul>
+            <li *ngFor="let item2 of item.list">语文-{{item2.yuwen}}  数学-{{item2.shuxu}}  英语-{{item2.yiyu}}</li>
+        </ul>
+    </li>
+</ol>
