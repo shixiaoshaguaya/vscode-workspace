@@ -1,0 +1,15 @@
+<h3>产品列表</h3>
+<ul>
+    <li *ngFor="let item of productLst; let key = index">
+        <hr>
+        <span *ngIf="item.price>100" class="red">
+            <img src="assets/{{item.pic}}" /><br>
+            {{key}}---{{item.title}} ￥{{item.price}}
+        </span>
+        <span *ngIf="item.price<100" class="green">
+            <img src="assets/{{item.pic}}" /><br>
+            {{key}}---{{item.title}} ￥{{item.price}}
+        </span>
+    </li>
+    <div><img [src]="imgurl"><br></div>
+</ul>

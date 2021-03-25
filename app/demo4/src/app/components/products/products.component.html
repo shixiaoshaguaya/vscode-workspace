@@ -1,0 +1,7 @@
+<h2>产品列表</h2>
+<ul>
+    <li *ngFor="let item of productLst; let key = index">
+        <img src="assets/{{item.pic}}"><br>
+        {{item.title}} ￥{{item.price}}
+    </li>
+</ul>
