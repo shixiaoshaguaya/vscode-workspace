@@ -1,0 +1,14 @@
+<div id="loginform">
+  <ul>
+    <li><label for="username">登录名称：</label>
+      <input type="text" placeholder="请输入用户名" name="username" id="username" [(ngModel)]="username"></li>
+    <li><label for="password">登录密码：</label>
+      <input type="password" placeholder="请输入密码" name="password" id="password" [(ngModel)]="password"></li>
+    <li><button name="login" (click)="login();">登录</button></li>
+  </ul>
+  <div id="logininfo">
+    <span *ngIf="username">
+      您输入的帐号为：{{username}},密码:{{password}}
+    </span>
+  </div>
+</div>

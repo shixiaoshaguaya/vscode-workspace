@@ -1,0 +1,9 @@
+<div>
+    <span>{{title}}</span>
+    <ul>
+       <li *ngFor="let item of productLst">
+        <img src="./assets/{{item.pic}}"/><br>
+        {{item.title}}  ￥{{item.price}}                        
+       </li>
+    </ul>    
+</div>

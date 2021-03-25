@@ -1,0 +1,28 @@
+#loginform {
+  margin: auto;
+  width: 600px;
+  border-width: 1px;
+  border-color: red;
+
+  ul {
+    padding: 10 auto;
+    width: 550px;
+    list-style: none;
+
+    li {
+      float: left;
+      height: 30px;
+      margin: 5px 10px;
+
+      input {
+        height: 20px;
+        width: 80px;
+      }
+    }
+  }
+
+  #logininfo {
+    clear: both;
+    margin: 5px;
+  }
+}

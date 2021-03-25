@@ -1,0 +1,39 @@
+h2 {
+  border-color: red;
+}
+
+#loginform {
+  margin: auto;
+  width: 600px;
+  border-width: 1px;
+  border-color: red;
+
+  ul {
+    padding: 10 auto;
+    width: 550px;
+    list-style: none;
+
+    li {
+      height: 30px;
+
+      button {
+        height: 30px;
+        width: 100px;
+        margin: 35px;
+      }
+
+      ;
+
+      input {
+        margin-top: 1px;
+        height: 25px;
+        width: 200px;
+      }
+    }
+  }
+
+  #logininfo {
+    clear: both;
+    margin: 30px 30px;
+  }
+}
