@@ -4,5 +4,10 @@
 			"path": "app"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.wordWrap": "bounded",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.tabSize": 2
+	}
 }
