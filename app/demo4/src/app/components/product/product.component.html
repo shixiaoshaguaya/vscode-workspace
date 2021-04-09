@@ -1,0 +1,23 @@
+<div>
+  <h3>{{title}}</h3>
+  <ul>
+    <li *ngFor="let item of productLst">
+      <img src="/assets/{{item.pic}}" /><br>
+      {{item.title}} ￥{{item.price}}
+      <span *ngIf="item.pnum&lt;=0">暂时缺货</span>
+      <span *ngIf="item.pnum>0">库存{{item.pnum}}</span>
+    </li>
+  </ul>
+</div>
+<div>
+  <h3>添加新产品</h3>
+  <ul>
+    <li>
+      产品编号：<input type="text" [(ngModel)]="product_id"><br>
+      产品名称：<input type="text" [(ngModel)]="product_title"><br>
+      产品价格：<input type="number" [(ngModel)]="product_price"><br>
+      产品库存：<input type="number" [(ngModel)]="product_pnum"><br>
+      <button (click)="saveProduct()">保存</button>
+    </li>
+  </ul>
+</div>

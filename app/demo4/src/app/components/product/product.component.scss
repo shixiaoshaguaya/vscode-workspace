@@ -1,0 +1,36 @@
+h3 {
+  clear: both;
+  text-align: center;
+}
+
+div {
+  margin: auto;
+  padding: auto;
+  width: 400px;
+
+  img {
+    width: 150px;
+    height: 120px;
+  }
+}
+
+ul {
+  margin: auto;
+  padding: auto;
+  width: 400px;
+  list-style: none;
+
+  li {
+    padding: 10 10;
+    width: 200px;
+    height: 180px;
+    font-size: 10px;
+    float: left;
+
+    img {
+
+      width: 150px;
+      height: 120px;
+    }
+  }
+}

@@ -7,6 +7,8 @@ import { SixComponent } from './components/six/six.component';
 import { SevenComponent } from './components/seven/seven.component';
 import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
+import { StorageService } from "./services/storage.service";
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -14,14 +16,15 @@ import { LoginComponent } from './components/login/login.component';
     SixComponent,
     SevenComponent,
     ProductsComponent,
-    LoginComponent
+    LoginComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
