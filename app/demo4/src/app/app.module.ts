@@ -9,6 +9,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { StorageService } from "./services/storage.service";
 import { ProductComponent } from './components/product/product.component';
+import { ProductlistComponent } from './components/productlist/productlist.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonService } from "./services/common.service";
 
 @NgModule({
   declarations: [
@@ -17,14 +20,16 @@ import { ProductComponent } from './components/product/product.component';
     SevenComponent,
     ProductsComponent,
     LoginComponent,
-    ProductComponent
+    ProductComponent,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [StorageService],
+  providers: [StorageService, CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
