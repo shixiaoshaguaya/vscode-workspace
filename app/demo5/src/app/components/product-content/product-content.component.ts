@@ -18,7 +18,7 @@ export class ProductContentComponent implements OnInit {
     this.route.params.subscribe(data => this.id = data.id);
     let api = "products/id/" + this.id;
     this.commonService.ajaxGet(api).then((response: any) => {
-      this.product = response.data[0];
+      this.product = response.data;
     });//获取到的新的产品数据
   }
 

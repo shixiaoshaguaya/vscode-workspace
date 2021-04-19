@@ -1,7 +1,25 @@
 <p>产品列表</p>
 <ul>
   <li *ngFor="let item of products">
-    <a routerLink='/productcontent/{{item.id}}'>{{item.productname}}</a>
+    <div class='id'>{{item.id}}</div>
+    <div class='image'><a routerLink='/productcontent/{{item.id}}'><img class='image' src='{{item.image}}' width="100px"
+          height="100px" /></a></div>
     <button (click)="goProduct(item.id);">查看详情</button>
+    <br />
+    <br />
+  </li>
+</ul>
+
+
+<p>产品列表2</p>
+<ul>
+  <li *ngFor="let item of products; let key = index">
+    <div>
+      <a routerLink='/productcontent2' [queryParams]="{id:item.id, productname:item.productname}">{{item.productname}}
+      </a>
+
+      <!-- <a routerLink='productcontent2' [queryParams]="{id:item.id, productname:item.productname}">{{item.productname}}
+      </a> -->
+    </div>
   </li>
 </ul>

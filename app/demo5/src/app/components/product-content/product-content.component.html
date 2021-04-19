@@ -1,6 +1,10 @@
 <p>产品详情</p>
-<div class='id'>{{product.id}}</div>
-<div class='productname'>{{product.productname}}</div>
-<div class='image'><img class='image' src='{{product.image}}' width="350px" height="350px" /></div>
-<div class='price'>{{product.price}}</div>
-<div class='description'>{{product.description}}</div>
+<ul>
+  <li *ngFor="let item of product">
+    <div class='id'>{{item.id}}</div>
+    <div class='productname'>{{item.productname}}</div>
+    <div class='image'><img class='image' src='{{item.image}}' width="350px" height="350px" /></div>
+    <div class='price'>{{item.price}}</div>
+    <div class='description'>{{item.description}}</div>
+  </li>
+</ul>

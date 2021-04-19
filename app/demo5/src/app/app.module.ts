@@ -10,6 +10,10 @@ import { NewsComponent } from './components/news/news.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonService } from "./services/common.service";
+import { ProductContent2Component } from './components/product-content2/product-content2.component';
+import { Product2Component } from './components/product2/product2.component';
+import { Product2ContentComponent } from './components/product2-content/product2-content.component';
+import { Product2Content2Component } from './components/product2-content2/product2-content2.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { CommonService } from "./services/common.service";
     ProductComponent,
     ProductContentComponent,
     NewsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProductContent2Component,
+    Product2Component,
+    Product2ContentComponent,
+    Product2Content2Component
   ],
   imports: [
     BrowserModule,

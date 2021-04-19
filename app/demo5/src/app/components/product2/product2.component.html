@@ -1,0 +1,16 @@
+<p>产品列表</p>
+<ul>
+  <li *ngFor="let item of products">
+    <a routerLink='/product2content/{{item._id}}'>{{item.title}}</a>
+    <button (click)="goProduct(item._id);">查看详情</button>
+    <br />
+  </li>
+</ul>
+
+<p>产品列表2</p>
+<ul>
+  <li *ngFor="let item of products">
+    <a routerLink='/product2content2'
+      [queryParams]="{id:item._id, title:item.title, price:item.price, pic:item.pic}">{{item.title}}</a>
+  </li>
+</ul>
