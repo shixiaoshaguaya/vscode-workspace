@@ -12,11 +12,23 @@ import { Product2Content2Component } from './components/product2-content2/produc
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'product', component: ProductComponent },
+  {
+    path: 'product', component: ProductComponent,
+    children: [
+      { path: 'productcontent/:id', component: ProductContentComponent },
+      { path: 'productcontent', component: ProductContent2Component }
+    ]
+  },
   { path: 'news', component: NewsComponent },
   { path: 'productcontent/:id', component: ProductContentComponent },
   { path: 'productcontent2', component: ProductContent2Component },
-  { path: 'product2', component: Product2Component },
+  {
+    path: 'product2', component: Product2Component,
+    children: [
+      { path: 'product2content/:_id', component: Product2ContentComponent },
+      { path: 'product2content2', component: Product2Content2Component }
+    ]
+  },
   { path: 'product2content/:_id', component: Product2ContentComponent },
   { path: 'product2content2', component: Product2Content2Component },
   {
