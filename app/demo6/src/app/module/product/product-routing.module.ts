@@ -3,13 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductContentComponent } from './components/product-content/product-content.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductComponent } from './product.component';
+import { SearchComponent } from './search/search.component';
+import { TodolistComponent } from './todolist/todolist.component';
 
 const routes: Routes = [
   {
     path: '', component: ProductComponent,
     children: [
       { path: 'list', component: ProductListComponent },
-      { path: 'details', component: ProductContentComponent }
+      { path: 'details', component: ProductContentComponent },
+      { path: 'search', component: SearchComponent },
+      { path: 'todolist', component: TodolistComponent }
     ]
   }
 ];
