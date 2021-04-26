@@ -42,12 +42,12 @@ export class TodolistComponent implements OnInit {
   }
 
   a(key: number) {
-    this.todolist[key].status = "1";
+    this.todolist[key].status = 1;
     this.storage.set('todolist', this.todolist);
   }
 
   b(key: number) {
-    this.todolist[key].status = "0";
+    this.todolist[key].status = 0;
     this.storage.set('todolist', this.todolist);
   }
 
