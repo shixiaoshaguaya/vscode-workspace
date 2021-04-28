@@ -1,0 +1,11 @@
+<p>物流快递单查询</p>
+<p>请输入您的快递单号
+  <input type="text" placeholder="请输入快递单号" [(ngModel)]="sno">
+  <button name="btOk" (click)='ai_answer()'>查询</button></p>
+<p>订单状态:</p>
+<ul>
+  <li *ngFor="let item of traces">
+    time:{{item.time}}<br>
+    desc:{{item.desc}}
+  </li>
+</ul>
