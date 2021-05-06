@@ -1,0 +1,19 @@
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  width: 375px;
+
+  li {
+    float: left;
+    width: 125px;
+    height: 150px;
+    font-size: x-small;
+    text-align: center;
+
+    img {
+      width: 125px;
+      height: 130px;
+    }
+  }
+}

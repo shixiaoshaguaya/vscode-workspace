@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../../assets/qrcode.png" />
+    </ion-buttons>
+    <ion-searchbar placeholder="请输入关键词" animated></ion-searchbar>
+    <ion-buttons slot="end" class="message">
+      <img src="../../assets/message.png" />
+      <ion-badge color="danger" class="badge">8</ion-badge>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">精选</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ul>
+    <li *ngFor="let item of products">
+      <img src="../../assets/{{item.img}}" />
+
+      {{item.title}} ￥{{item.price}}
+    </li>
+  </ul>
+</ion-content>
