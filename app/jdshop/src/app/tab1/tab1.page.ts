@@ -15,10 +15,19 @@ export class Tab1Page {
   public hotListWidth: any = 400;
 
   constructor(public common: CommonService) {
-    for (let i = 1; i <= 9; i++) {
-      this.products.push({ id: i, title: `精选产品${i}`, price: i * 100, img: `0${i}.jpg` });
-    }
+    // for (let i = 1; i <= 9; i++) {
+    //   this.products.push({ id: i, title: `精选产品${i}`, price: i * 100, img: `0${i}.jpg` });
+    // }
     this.config = this.common.config;
+  }
+
+  //获取商品列表
+  getProductList() {
+    var api = "api/plist?is_best=1";
+    this.common.ajaxGet(api).then((res: any) => {
+      this.products = res.result;
+    }
+    );
   }
 
   //获取轮播图的数据
@@ -33,6 +42,7 @@ export class Tab1Page {
   ngOnInit(): void {
     this.getFocusData();
     this.getHotData();
+    this.getProductList();
   }
 
   @ViewChild('slide1', null) slide1;

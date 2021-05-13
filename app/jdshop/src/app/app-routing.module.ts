@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'user',
     loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+  },
+  {
+    path: 'pcontent',
+    loadChildren: () => import('./pcontent/pcontent.module').then( m => m.PcontentPageModule)
   }
 ];
 @NgModule({

@@ -62,3 +62,16 @@ ul {
     }
   }
 }
+
+.plist {
+  .plist_inner {
+    padding: .5rem;
+    border: .05rem solid rgb(138, 50, 50);
+
+    .plist_title {
+      height: 3.8rem;
+      overflow: hidden;
+      line-height: 1.8;
+    }
+  }
+}

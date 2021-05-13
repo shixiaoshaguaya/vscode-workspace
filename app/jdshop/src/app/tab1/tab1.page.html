@@ -28,10 +28,26 @@
       </li>
     </ul>
   </div>
-  <ul>
+  <div class="h_title">
+    商品列表
+  </div>
+  <div class="plist">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of products" [routerLink]="['/pcontent']" [queryParams]="{id:item._id}">
+          <div class="plist_inner">
+            <img [src]="config.domain+item.s_pic" />
+            <div class="plist_title">{{item.title}}</div>
+            <p class="price">￥{{item.price}}元</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <!-- <ul>
     <li *ngFor="let item of products">
       <img src="../../assets/{{item.img}}" />
       {{item.title}} ￥{{item.price}}
     </li>
-  </ul>
+  </ul> -->
 </ion-content>
