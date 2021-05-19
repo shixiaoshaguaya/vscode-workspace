@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'pcontent',
     loadChildren: () => import('./pcontent/pcontent.module').then( m => m.PcontentPageModule)
+  },
+  {
+    path: 'productlist',
+    loadChildren: () => import('./productlist/productlist.module').then( m => m.ProductlistPageModule)
   }
 ];
 @NgModule({
