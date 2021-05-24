@@ -23,9 +23,38 @@
 </ion-header>
 
 <ion-content>
+  <div class="search_content" *ngIf="flag" padding>
+    <div class="hotlist">
+      <h3 class="search_title">热搜</h3>
+      <p>
+        <span (tap)="goSearch('女装')">女装</span>
+        <span (tap)="goSearch('男装')">男装</span>
+        <span>家具</span>
+        <span>化妆品</span>
+        <span>女装</span>
+        <span>女装</span>
+        <span>男装</span>
+        <span>家具</span>
+        <span>化妆品</span>
+      </p>
+    </div>
+    <div class="history" *ngIf="flag">
+      <div *ngIf="historyList.length>0">
+        <h3 class="search_title">历史搜索</h3>
+        <ion-list lines="full">
+          <ion-item *ngFor="let item of historyList;let key=index;" (press)="removeHistory(key)" (tap)="goSearch(item)">
+            {{item}}
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
   <div class="list_content">
     <ion-list>
       <ion-item *ngFor="let item of productList">
+        <ion-thumbnail slot="start">
+          <img [src]="config.domain+item.pic" />
+        </ion-thumbnail>
         <ion-label>
           <h3>{{item.title}}</h3>
           <p><span class="price">¥{{item.price}}</span></p>
