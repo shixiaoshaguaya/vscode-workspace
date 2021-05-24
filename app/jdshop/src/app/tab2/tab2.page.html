@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <img src="../../assets/qrcode.png" />
     </ion-buttons>
-    <ion-searchbar placeholder="请输入关键词" animated></ion-searchbar>
+    <ion-searchbar placeholder="请输入关键词" animated (tap)="goSearch()"></ion-searchbar>
     <ion-buttons slot="end" class="message">
       <img src="../../assets/message.png" />
       <ion-badge color="danger" class="badge">8</ion-badge>

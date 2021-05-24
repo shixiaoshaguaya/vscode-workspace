@@ -9,7 +9,7 @@
     <ion-searchbar placeholder="请输入搜索关键词" animated>
     </ion-searchbar>
     <ion-buttons slot="end">
-      <ion-button color="dark">
+      <ion-button (click)="doSearch()" color="dark">
         搜索
       </ion-button>
     </ion-buttons>
@@ -19,7 +19,7 @@
 <ion-content>
   <div class="list_content">
     <ion-list>
-      <ion-item *ngFor="let item of productList">
+      <ion-item *ngFor="let item of productList" [routerLink]="['/pcontent']" [queryParams]="{id:item._id}">
         <ion-thumbnail slot="start">
           <img [src]="config.domain+item.s_pic" />
         </ion-thumbnail>
@@ -29,7 +29,7 @@
         </ion-label>
       </ion-item>
     </ion-list>
-    <ion-infinite-scroll threshold="100px" (ionInfinite)="getProductList($event)">
+    <ion-infinite-scroll threshold="50px" (ionInfinite)="getProductList($event)">
       <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="努力加载中...">
       </ion-infinite-scroll-content>
     </ion-infinite-scroll>

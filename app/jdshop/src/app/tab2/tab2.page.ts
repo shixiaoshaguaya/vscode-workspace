@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { $ } from 'protractor';
 import { CommonService } from '../services/common.service';
 
@@ -13,7 +14,7 @@ export class Tab2Page implements OnInit {
   public rCateList: any[] = []; //存储二级分类列表数据
   public selectedId: any = "";//选中的id
 
-  constructor(public comm: CommonService) {
+  constructor(public comm: CommonService, public NC: NavController) {
     this.config = this.comm.config;
   }
 
@@ -34,6 +35,9 @@ export class Tab2Page implements OnInit {
     this.comm.ajaxGet(api).then((res: any) => {
       this.rCateList = res.result;
     })
-    // $("ion-item").toggleClass("active");
+  }
+
+  goSearch() {
+    this.NC.navigateForward("/search");
   }
 }

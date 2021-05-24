@@ -29,7 +29,7 @@ export class ProductlistPage implements OnInit {
   getProductList(event) {
     var api = 'api/plist?cid=' + this.cid + "&page=" + this.page;
     this.comm.ajaxGet(api).then((res: any) => {
-      console.log(res);
+      // console.log(res);
       this.productList = this.productList.concat(res.result);
       this.page++;
       event ? event.target.complete() : '';
@@ -37,5 +37,9 @@ export class ProductlistPage implements OnInit {
         event ? event.target.disabled = true : "";
       }
     })
+  }
+
+  goBack() {
+    this.nc.navigateBack("/tabs/tab2");
   }
 }
