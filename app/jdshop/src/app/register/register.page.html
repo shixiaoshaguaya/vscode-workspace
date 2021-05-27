@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark" defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>用户注册</ion-title>
+    <ion-button slot="end" size="small" (click)="register()">注册</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">用户名</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">密码</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">联系电话</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">昵称</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-radio-group>
+      <ion-list-header>
+        <ion-label>
+          性别
+        </ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>男</ion-label>
+        <ion-radio value="M"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>女</ion-label>
+        <ion-radio value="F"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
