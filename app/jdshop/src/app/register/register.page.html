@@ -11,42 +11,25 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label position="stacked">用户名</ion-label>
-      <ion-input></ion-input>
+      <ion-label position="stacked">手机号</ion-label>
+      <ion-input type="tel" [(ngModel)]="tel"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">密码</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">联系电话</ion-label>
-      <ion-input></ion-input>
+      <ion-label position="stacked">确认密码</ion-label>
+      <ion-input type="password" [(ngModel)]="rpassword"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="stacked">昵称</ion-label>
-      <ion-input></ion-input>
+      <ion-label position="stacked">验证码</ion-label>
+      <ion-input [(ngModel)]="code"></ion-input>
+      <ion-button slot="end" size="small" (click)="sendCode()">发送验证码</ion-button>
     </ion-item>
 
-    <ion-radio-group>
-      <ion-list-header>
-        <ion-label>
-          性别
-        </ion-label>
-      </ion-list-header>
-
-      <ion-item>
-        <ion-label>男</ion-label>
-        <ion-radio value="M"></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>女</ion-label>
-        <ion-radio value="F"></ion-radio>
-      </ion-item>
-
-    </ion-radio-group>
   </ion-list>
 </ion-content>
