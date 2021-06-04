@@ -2,12 +2,16 @@
 	"folders": [
 		{
 			"path": "app"
+		},
+		{
+			"path": "..\\note"
 		}
 	],
 	"settings": {
-		"editor.wordWrap": "bounded",
+		"editor.wordWrap": "on",
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
-		"editor.tabSize": 2
+		"editor.tabSize": 2,
+		"git.ignoreLimitWarning": true
 	}
 }

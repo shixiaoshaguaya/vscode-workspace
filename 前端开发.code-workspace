@@ -4,8 +4,26 @@
 			"path": "Web"
 		},
 		{
-			"path": "Web学习"
+			"path": "C:\\Users\\ChenZhe\\Documents\\Tencent Files\\1163207527\\FileRecv\\C0796  舌尖上的美食（1页）\\html"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-05\\js收官测试题"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-05\\考试题讲解1"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-05\\考试题讲解2"
+		},
+		{
+			"path": "..\\note"
+		},
+		{
+			"path": "前端项目"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.tabSize": 2,
+		"liveServer.settings.multiRootWorkspaceName": "Web"
+	}
 }
