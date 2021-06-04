@@ -1,0 +1,24 @@
+.user_top {
+  background: url(../../assets/imgs/user_bg.jpg);
+  height: 15rem;
+  line-height: 15rem;
+
+  img {
+    position: absolute;
+    top: 5rem;
+    margin-left: 1rem;
+    border-radius: 100%;
+  }
+
+  span {
+    margin-left: 7rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .settings {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+}

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark" defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>用户注册</ion-title>
+    <ion-button slot="end" size="small" (click)="register()">注册</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">账号</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">密码</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">确认密码</ion-label>
+      <ion-input type="password" [(ngModel)]="rpassword"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">验证码</ion-label>
+      <ion-input [(ngModel)]="code"></ion-input>
+      <ion-button slot="end" size="small" (click)="sendCode()">发送验证码</ion-button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
