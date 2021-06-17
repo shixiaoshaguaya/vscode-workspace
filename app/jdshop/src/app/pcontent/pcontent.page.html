@@ -25,10 +25,11 @@
           <h2>{{list.title}}</h2>
           <p>{{list.sub_title}}</p>
         </div>
-      </div>
-      <div class="p_price mb10">
-        <span class="now_price">特价：<span class="price">¥{{list.price}}</span></span> 原价：
-        <span class="old_price"> ¥{{list.old_price}}</span>
+
+        <div class="p_price mb10">
+          <span class="now_price">特价：<span class="price">¥{{list.price}}</span></span> 原价：
+          <span class="old_price"> ¥{{list.old_price}}</span>
+        </div>
       </div>
       <div class="p_attr mb10">
         <div id="myAttr" (click)="changeAttr($event)">
@@ -38,15 +39,15 @@
               {{attr}}</span>
           </div>
         </div>
-      </div>
-      <div class="number">
-        <strong>数量:</strong>
-        <div class="cart_number">
-          <div class="input_left" (click)="decNum()">-</div>
-          <div class="input_center">
-            <input type="text" readonly="readonly" value="1" name="num" [(ngModel)]="num" />
+        <div class="number">
+          <strong>数量:</strong>
+          <div class="cart_number">
+            <div class="input_left" (click)="decNum()">-</div>
+            <div class="input_center">
+              <input type="text" readonly="readonly" value="1" name="num" [(ngModel)]="num" />
+            </div>
+            <div class="input_right" (click)="incNum()">+</div>
           </div>
-          <div class="input_right" (click)="incNum()">+</div>
         </div>
       </div>
       <div class="fee mb10">

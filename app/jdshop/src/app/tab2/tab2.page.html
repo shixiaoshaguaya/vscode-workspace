@@ -15,7 +15,8 @@
   <div class="cate_content">
     <div class="cate_left">
       <ion-list lines="full">
-        <ion-item *ngFor="let item of lCateList" (tap)="getRightCateData(item._id)">
+        <ion-item *ngFor="let item of lCateList" (tap)="getRightCateData(item._id)"
+          [ngClass]="{'active': item._id==selectedId}">
           <ion-label>{{item.title}}</ion-label>
         </ion-item>
       </ion-list>
