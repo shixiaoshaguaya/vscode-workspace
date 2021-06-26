@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "..\\note"
+		},
+		{
+			"path": "..\\vscode"
 		}
 	],
 	"settings": {

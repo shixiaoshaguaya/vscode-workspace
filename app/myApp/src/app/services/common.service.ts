@@ -5,7 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommonService {
-  public config: any = { domain: 'http://49.234.38.219:8080/opple602/rest' }
+  public config: any = {
+    domain: 'http://49.234.38.219:8080/opple602/rest',
+    img: 'http://49.234.38.219:8080/opple602/rest/displayimage?filename='
+  }
 
   constructor(public http: HttpClient) { }
 

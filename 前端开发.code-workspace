@@ -20,10 +20,34 @@
 		},
 		{
 			"path": "前端项目"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-05\\学生管理系统1"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-05\\学生管理系统2"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-05\\学生管理系统3"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-06\\6月4日三次握手四次挥手+跨域"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-06\\6月7日ajax封装+瀑布流"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-06\\6月8日聊天室+瀑布流课程完成代码"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-06\\6月9日网络面试题代码"
+		},
+		{
+			"path": "C:\\Users\\ChenZhe\\Documents\\WeChat Files\\wxid_b4zzcwwls2g922\\FileStorage\\File\\2021-06\\swiper"
 		}
 	],
 	"settings": {
 		"editor.tabSize": 2,
-		"liveServer.settings.multiRootWorkspaceName": "Web"
+		"liveServer.settings.multiRootWorkspaceName": "swiper"
 	}
 }
